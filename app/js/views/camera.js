@@ -12,7 +12,4 @@ $(document).ready(function(){
                   console.log("Unable to get video stream!")
               }
       )
-      
-      
-      
 })
