@@ -136,3 +136,7 @@ label {
 button i {
   padding-left: 8px;
 }
+#camera-container {
+  width: 600px;
+  margin: 160px auto;
+}
