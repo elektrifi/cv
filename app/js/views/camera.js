@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
 
   video = document.getElementById("live")
