@@ -1,17 +1,17 @@
 {
-    "name": "node-login",
+    "name": "cv-login",
     "version": "1.0.0",
-    "description": "A template for quickly building login systems on top of Node.js & MongoDb",
+    "description": "Login for the CV project based on a template from Stephen Braitsch, stephen@braitsch.io, http://node-login.braitsch.io",
     "author": {
-        "name": "Stephen Braitsch",
-        "email": "stephen@braitsch.io"
+        "name": "Jonathan Forbes",
+        "email": "elektrifi@gmail.com"
     },
     "website":{
-        "url": "node-login.braitsch.io"
+        "url": "176.34.120.236:8889"
     },
     "repository": {
         "type": "git",
-        "url": "git://github.com/braitsch/node-login.git"
+        "url": "git://github.com/elektrifi/cv.git"
     },
     "private": true,
     "dependencies": {

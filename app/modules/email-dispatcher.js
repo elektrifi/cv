@@ -25,13 +25,13 @@ EM.send = function(credentials, callback)
 
 EM.drawEmail = function(o)
 {
-	var link = 'http://node-login.braitsch.io/reset-password?u='+o.pass;
+	var link = 'http://176.34.120.236:8889/reset-password?u='+o.pass;
 	var html = "<html><body>";
 		html += "Hi "+o.name+",<br><br>";
 		html += "Your username is :: <b>"+o.user+"</b><br><br>";
 		html += "<a href='"+link+"'>Please click here to reset your password</a><br><br>";
 		html += "Cheers,<br>";
-		html += "<a href='http://twitter.com/braitsch'>braitsch</a><br><br>";
+		html += "<a href='http://twitter.com/elektrifi'>@elektrifi</a><br><br>";
 		html += "</body></html>";
 	return  [{data:html, alternative:true}];
 }

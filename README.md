@@ -1,4 +1,4 @@
-#[Node-Login](http://node-login.braitsch.io)
+#Based on [Node-Login](http://node-login.braitsch.io), updates by Jonathan Forbes
 
 ####A basic login & account management system built in Node.js with the following features :
 
@@ -25,19 +25,16 @@
 
 ***
 
-A [Live Demo](http://node-login.braitsch.io) and [some thoughts about the app's architecture.](http://www.quietless.com/kitchen/building-a-login-system-in-node-js-and-mongodb/)
+A [Live Demo](http://176.34.120.236:8889) and original [rationale about the app's architecture.](http://www.quietless.com/kitchen/building-a-login-system-in-node-js-and-mongodb/)
 
 ***
 
 ####Installation & Setup
 This assumes you already have node.js & npm installed.
 ```
-git clone git@github.com:braitsch/node-login.git node-login
-cd node-login
+git clone git@github.com:elektrifi/cv.git cv
+cd cv
 npm install -d
 node app
 ```
-For testing purposes, I've provided a [database dump of all accounts here.](http://node-login.braitsch.io/print)  
-Please note this list and the entire database automatically resets every 24 hours.
-
-Questions and suggestions for improvement are welcome.
+For testing purposes, I've provided a [database dump of all accounts here.](http://176.34.120.236:8889/print)

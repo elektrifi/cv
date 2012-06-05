@@ -2,6 +2,7 @@
 /**
  * Node.js Node Login
  * Author :: Stephen Braitsch
+ * Updated by Jonathan Forbes
  */
 
 var exp = require('express');
