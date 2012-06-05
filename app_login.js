@@ -13,6 +13,6 @@ global.host = 'localhost';
 require('./app/core/config')(app, exp);
 require('./app/router')(app);
 
-app.listen(8080, function(){
+app.listen(8889, function(){
  	console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
 });
