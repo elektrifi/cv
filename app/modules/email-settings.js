@@ -1,9 +1,9 @@
 
 module.exports = {
 	
-	host		: 'smtp.gmail.com',
-	user 		: 'your-email-address@gmail.com',
-	password 	: 'your-email-password',
-	sender		: 'Your Name <your-email-address@gmail.com>'
+	host		: 'smtp.1and1.co.uk',
+	user 		: 'jonathan.forbes@elektrifi.com',
+	password 	: 'S0ucd_wywh#2',
+	sender		: 'Jonathan Forbes <jonathan.forbes@elektrifi.com>'
 	
 }
