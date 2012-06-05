@@ -5,7 +5,7 @@ var Server = require('mongodb').Server;
 
 var dbPort = 27017;
 var dbHost = global.host;
-var dbName = 'login-testing';
+var dbName = 'cv';
 
 // use moment.js for pretty date-stamping //
 var moment = require('moment');
