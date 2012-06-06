@@ -9,24 +9,10 @@
     p
     p Remember to enable mediastream via chrome://flags
 
-script(type='text/javascript')
-  var video = $("#live").get()[0];
-  var canvas = $("#canvas");
-  var ctx = canvas.get()[0].getContext('2d');
-  navigator.webkitGetUserMedia("video",
-    function(stream) { video.src = webkitURL.createObjectURL(stream); },
-    function(err) { console.log("Unable to get video stream!") }
-  );
-  timer = setInterval(
-    function () {
-      ctx.drawImage(video, 0, 0, 320, 240);
-    }, 250
-  );
-  
 script(src='/vendor/jquery.min.js')
 script(src='/vendor/jquery.form.js')
 script(src='/vendor/bootstrap-modal.js')
 script(src='/vendor/bootstrap-transition.js')
 script(src='/js/form-validators/accountValidator.js')
-//- script(src='/js/views/camera.js')
+script(src='/js/views/camera2.js')
 //- script(src='/js/controllers/cameraController.js')
