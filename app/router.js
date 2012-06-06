@@ -10,7 +10,7 @@ module.exports = function(app) {
 	app.get('/', function(req, res){
 	// check if the user's credentials are saved in a cookie //
 		if (req.cookies.user == undefined || req.cookies.pass == undefined){
-			res.render('login', { locals: { title: 'Hello - Please Login To Your Account' }});
+			res.render('login', { locals: { title: 'Welcome to icSOP - Please Login' }});
 		}	else{
 	// attempt automatic login //
 			AM.autoLogin(req.cookies.user, req.cookies.pass, function(o){
@@ -18,7 +18,7 @@ module.exports = function(app) {
 				    req.session.user = o;
 					res.redirect('/home');
 				}	else{
-					res.render('login', { locals: { title: 'Hello - Please Login To Your Account' }});
+					res.render('login', { locals: { title: 'Welcome to icSOP - Please Login' }});
 				}
 			});
 		}
@@ -60,7 +60,7 @@ module.exports = function(app) {
 	    }   else{
 			res.render('home', {
 				locals: {
-					title : 'Control Panel',
+					title : 'icSOP Control Panel',
 					countries : CT,
 					udata : req.session.user
 				}

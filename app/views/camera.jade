@@ -8,9 +8,6 @@
     p
     p Remember to enable mediastream via chrome://flags
 
-    div
-      video#live(width='320', height='240', autoplay='autoplay')
-
 script(type='text/javascript')
     video = document.getElementById("live")
     var ctx;
@@ -24,5 +21,10 @@ script(type='text/javascript')
             }
     )
 
+script(src='/vendor/jquery.min.js')
+script(src='/vendor/jquery.form.js')
+script(src='/vendor/bootstrap-modal.js')
+script(src='/vendor/bootstrap-transition.js')
+script(src='/js/form-validators/accountValidator.js')
 //- script(src='/js/views/camera.js')
 //- script(src='/js/controllers/cameraController.js')
