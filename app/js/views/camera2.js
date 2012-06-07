@@ -8,5 +8,5 @@
     timer = setInterval(
       function () {
         ctx.drawImage(video, 0, 0, 320, 240);
-      }, 250
+      }, 2000
     );
