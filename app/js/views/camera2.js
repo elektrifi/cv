@@ -25,7 +25,7 @@
         var data = canvas.get()[0].toDataURL('image/jpeg', 1.0);
         newblob = dataURItoBlob(data);
         ws.send(newblob);
-      }, 250);
+      }, 2500);
 
     ws.onmessage = function (msg) {
         var target = document.getElementById("target");
@@ -38,6 +38,12 @@
     }      
 
 function dataURItoBlob(dataURI) {
+	
+    /* BlobBuilder is an new interface to build a Blob which
+    * is required to FormData for sending "files" in a request
+    */
+    BlobBuilder = window.MozBlobBuilder || window.WebKitBlobBuilder || window.BlobBuilder
+	
     // convert base64 to raw binary data held in a string
     // doesn't handle URLEncoded DataURIs
     var byteString = atob(dataURI.split(',')[1]);
