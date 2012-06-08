@@ -14,9 +14,10 @@
     );
     */
 
-    var ws = new WebSocket("ws://127.0.0.1:9999");
+    //var ws = new WebSocket("ws://127.0.0.1:9999");
+    var ws = new WebSocket("ws://176.34.120.236:9999");
     ws.onopen = function () {
-              console.log("Openened connection to websocket");
+              console.log("Opened connection to websocket");
     }
         
     timer = setInterval(
@@ -25,7 +26,7 @@
         var data = canvas.get()[0].toDataURL('image/jpeg', 1.0);
         newblob = dataURItoBlob(data);
         ws.send(newblob);
-      }, 2500);
+      }, 250);
 
     ws.onmessage = function (msg) {
         var target = document.getElementById("target");
