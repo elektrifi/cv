@@ -24,9 +24,9 @@
       function () {
         ctx.drawImage(video, 0, 0, 320, 240);
         var data = canvas.get()[0].toDataURL('image/jpeg', 1.0);
-        newblob = dataURItoBlob(data);
+        newblob = dataURItoBlob(data);        
         ws.send(newblob);
-      }, 250);
+      }, 5000);
 
     ws.onmessage = function (msg) {
         var target = document.getElementById("target");
