@@ -15,7 +15,8 @@
     */
 
     //var ws = new WebSocket("ws://127.0.0.1:9999");
-    var ws = new WebSocket("ws://176.34.120.236:9999");
+    //var ws = new WebSocket("ws://176.34.120.236:9999");
+    var ws = new WebSocket("ws://54.247.191.50:9999"); // Need to parameterize this
     ws.onopen = function () {
               console.log("Opened connection to websocket");
     }
