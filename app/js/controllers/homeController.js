@@ -62,10 +62,11 @@ function HomeController()
 	this.attemptTransfer = function()
 	{
 		console.log('Attempting transfer to AR page...');
+		/**
 		var that = this;
 		$.ajax({
 			url: "/ar",
-			type: "POST",
+			type: "GET",
 			data: { id: $('#userId').val()},			
 			success: function(data){
 	 			that.showLockedAlert('Preparing to direct you to the Augmented Reality page.');
@@ -74,6 +75,8 @@ function HomeController()
 				console.log(jqXHR.responseText+' :: '+jqXHR.statusText);
 			}		
 		});
+		**/
+		window.location.href = '/ar';
 	}	
 	
 }
