@@ -173,13 +173,13 @@ module.exports = function(app) {
 	});
 
     // Augmented Reality page
-	app.get('/ar', function(req, res) {
+	app.get('/home-ar', function(req, res) {
 	    if (req.session.user == null){
 	// if user is not logged-in redirect back to login page //
 	        res.redirect('/');
 	    }   else {
-	    	console.log('Rendering AR page...');
-			res.render('ar', {
+	    	console.log('Rendering home-ar page...');
+			res.render('home-ar', {
 				locals: {
 					title : 'eyeQ Augmented Reality Control Panel',
 					countries : CT,

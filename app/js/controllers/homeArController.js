@@ -1,12 +1,12 @@
 
-function HomeController()
+function HomeArController()
 {	
 	
 // bind event listeners to button clicks //
 	var that = this;
 
 // handle transfer to AR page//	
-	$('#btn-ar').click(function(){ that.attemptTransfer(); });
+	$('#btn-fi').click(function(){ that.attemptTransfer(); });
 	
 // handle user logout //	
 	$('#btn-logout').click(function(){ that.attemptLogout(); });
@@ -61,7 +61,7 @@ function HomeController()
 	
 	this.attemptTransfer = function()
 	{
-		console.log('Attempting transfer to home-ar page...');
+		console.log('Attempting transfer to Face Detection (home) page...');
 		/**
 		var that = this;
 		$.ajax({
@@ -76,12 +76,12 @@ function HomeController()
 			}		
 		});
 		**/
-		window.location.href = '/home-ar';
+		window.location.href = '/home'; // Transfer to Face Detection
 	}	
 	
 }
 
-HomeController.prototype.onUpdateSuccess = function()
+HomeArController.prototype.onUpdateSuccess = function()
 {
 	$('.modal-alert').modal({ show : false, keyboard : true, backdrop : true });				
 	$('.modal-alert .modal-header h3').text('Success!');

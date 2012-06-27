@@ -4,18 +4,16 @@ div.navbar.navbar-fixed-top
         div.container-fluid
             ul#global-nav.nav.pull-left
                 a(href='#').brand eyeQ Control Panel
-            button#btn-ar.btn.btn-primary
-                i.icon-user.icon-white
-                | Aug Reality
+            button#btn-fi.btn.btn-primary
+                i.icon-eye-open.icon-white
+                | Face Detection
             button#btn-logout.btn.btn-warning
                 i.icon-lock.icon-white
                 | Sign Out
 
-//- include account
-//- include camera
-include camera2
+include ar
 include modals/alert
 include modals/confirm
 
-script(src='/js/views/home.js')
-script(src='/js/controllers/homeController.js')
+script(src='/js/views/home-ar.js')
+script(src='/js/controllers/homeArController.js')
