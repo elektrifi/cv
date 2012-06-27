@@ -7,33 +7,17 @@
       video#live(width='640', height='480', autoplay='autoplay', style='display: inline;')
     p
     p Remember to enable mediastream via chrome://flags
-    aside#info(lang='en')
-        .icon
-        .text
-          h1
-            span HTML5
-            | Webcam Toy
-          p
-            | This is a web app
-            | Currently only the following browsers support getUserMedia and WebGL:
-          ul
-          li
-            a(href='//www.google.com/chrome') Google Chrome
-            | — go to
-            code chrome:flags
-            | and enable the “MediaStream” flag
-          li
-            a(href='//opera.com/browser/') Opera 12
-            | — go to
-            code opera:config
-            | and
-            a(href='opera:config#UserPrefs|EnableWebGL', target='_blank') enable WebGL
-          li
-            a(href='https://play.google.com/store/apps/details?id=com.opera.browser') Opera Mobile 12
-            | — it works on Android!
-            
+
+    .demo
+      #dialog(title='Basic dialog')
+        p
+          | This is an animated dialog which is useful for displaying information. 
+          | The dialog window can be moved, resized and closed with the 'x' icon.
+      button#opener Open Dialog
+
 script(src='/vendor/jquery.min.js')
 script(src='/vendor/jquery.form.js')
+script(src='/vendor/jquery-ui-1.8.18.custom.min.js')
 script(src='/vendor/bootstrap-modal.js')
 script(src='/vendor/bootstrap-transition.js')
 script(src='/js/views/ar.js')

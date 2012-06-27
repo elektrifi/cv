@@ -144,3 +144,9 @@ label {
 button i {
   padding-left: 8px;
 }
+#opener {
+  width: 100px;
+  top: 10px;
+  right: 28px;
+  position: absolute;
+}
