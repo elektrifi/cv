@@ -16,6 +16,10 @@ body {
   background: radial-gradient(center, ellipse cover, #f2f9fe 0%, #d6f0fd 100%);
 /* W3C */
 }
+#ar-container {
+  width: 800px;
+  margin: 50px auto;
+}
 #camera-container {
   width: 640px;
   margin: 160px auto;

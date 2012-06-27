@@ -10,7 +10,7 @@ module.exports = function(app) {
 	app.get('/', function(req, res){
 	// check if the user's credentials are saved in a cookie //
 		if (req.cookies.user == undefined || req.cookies.pass == undefined){
-			res.render('login', { locals: { title: 'Welcome to icSOP - Please Login' }});
+			res.render('login', { locals: { title: 'Welcome to eyeQ - Please Login' }});
 		}	else{
 	// attempt automatic login //
 			AM.autoLogin(req.cookies.user, req.cookies.pass, function(o){
@@ -18,7 +18,7 @@ module.exports = function(app) {
 				    req.session.user = o;
 					res.redirect('/home');
 				}	else{
-					res.render('login', { locals: { title: 'Welcome to icSOP - Please Login' }});
+					res.render('login', { locals: { title: 'Welcome to eyeQ - Please Login' }});
 				}
 			});
 		}
@@ -60,7 +60,7 @@ module.exports = function(app) {
 	    }   else{
 			res.render('home', {
 				locals: {
-					title : 'icSOP Control Panel',
+					title : 'eyeQ Control Panel',
 					countries : CT,
 					udata : req.session.user
 				}
@@ -171,7 +171,22 @@ module.exports = function(app) {
 		AM.delAllRecords( );
 		res.redirect('/print');
 	});
+
+	app.get('/ar', function(req, res) {
+	    if (req.session.user == null){
+	// if user is not logged-in redirect back to login page //
+	        res.redirect('/');
+	    }   else{
+			res.render('ar', {
+				locals: {
+					title : 'eyeQ Augmented Reality Control Panel',
+					countries : CT,
+					udata : req.session.user
+				}
+			});
+	    }
+	});
 	
 	app.get('*', function(req, res) { res.render('404', { title: 'Page Not Found'}); });
-
+	
 };
