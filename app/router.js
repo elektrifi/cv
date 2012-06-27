@@ -172,11 +172,13 @@ module.exports = function(app) {
 		res.redirect('/print');
 	});
 
+    // Augmented Reality page
 	app.get('/ar', function(req, res) {
 	    if (req.session.user == null){
 	// if user is not logged-in redirect back to login page //
 	        res.redirect('/');
-	    }   else{
+	    }   else {
+	    	console.log('Rendering AR page...');
 			res.render('ar', {
 				locals: {
 					title : 'eyeQ Augmented Reality Control Panel',
@@ -186,7 +188,7 @@ module.exports = function(app) {
 			});
 	    }
 	});
-	
+		
 	app.get('*', function(req, res) { res.render('404', { title: 'Page Not Found'}); });
 	
 };

@@ -4,6 +4,9 @@ function HomeController()
 	
 // bind event listeners to button clicks //
 	var that = this;
+
+// handle transfer to AR page//	
+	$('#btn-ar').click(function(){ that.attemptTransfer(); });
 	
 // handle user logout //	
 	$('#btn-logout').click(function(){ that.attemptLogout(); });
@@ -55,6 +58,24 @@ function HomeController()
 		$('.modal-alert button').click(function(){window.location.href = '/';})
 		setTimeout(function(){window.location.href = '/';}, 3000);		
 	}
+	
+	this.attemptTransfer = function()
+	{
+		console.log('Attempting transfer to AR page...');
+		var that = this;
+		$.ajax({
+			url: "/ar",
+			type: "POST",
+			data: { id: $('#userId').val()},			
+			success: function(data){
+	 			that.showLockedAlert('Preparing to direct you to the Augmented Reality page.');
+			},			
+			error: function(jqXHR){
+				console.log(jqXHR.responseText+' :: '+jqXHR.statusText);
+			}		
+		});
+	}	
+	
 }
 
 HomeController.prototype.onUpdateSuccess = function()
