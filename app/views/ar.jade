@@ -1,20 +1,24 @@
 
 #ar-container
-    h1 Live Augmented Reailty
-    p Please use Google Chrome - other browsers aren't yet ready for HTML5 mediastreaming
+    h1 Live Augmented Reality
+    p Please use Google Chrome - other browsers aren't yet ready for HTML5 media-streaming
     p 
     div
-      video#live(width='640', height='480', autoplay='autoplay', style='display: inline;')
-    p
-    p Remember to enable mediastream/PeerConnection via chrome://flags
-    p See "Enable Media Source API on <video> elements." & "Enable PeerConnection."
+      //video#live(width='640', height='480', autoplay='autoplay', style='display: inline;')
 
-    .demo
-      #dialog(title='Basic dialog')
-        p
-          | This is an animated dialog which is useful for displaying information. 
-          | The dialog window can be moved, resized and closed with the 'x' icon.
-      button#opener Open Dialog
+#p-container
+  p Remember to enable mediastream/PeerConnection via chrome://flags 
+    | (see "Enable Media Source API on <video> elements." & "Enable PeerConnection.")
+
+#p-container
+  .demo
+    #dialog(title='Basic dialog')
+      p
+        | This is an animated dialog which is useful for displaying information. 
+        | The dialog window can be moved, resized and closed with the 'x' icon.
+  .demo
+    button#opener Open Dialog
+    button Test button
 
 script(src='/vendor/jquery.min.js')
 script(src='/vendor/jquery.form.js')

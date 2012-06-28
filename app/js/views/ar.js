@@ -1,10 +1,22 @@
+	
+  $(document).ready(function() {
+    // do stuff when DOM is ready
+	
+	// Get viewport dimensions
+	var viewportwidth  = $(window).width;
+	var viewportheight = $(window).height;
+	 
 	// increase the default animation speed to exaggerate the effect
-	$.fx.speeds._default = 1000;
+	$.fx.speeds._default = 500;
 	$(function() {
 		$( "#dialog" ).dialog({
 			autoOpen: false,
 			show: "blind",
-			hide: "explode"
+			hide: "explode",
+			width: 200,
+			minwidth: 100,
+			position: [160, 1],
+			title: "Task List"
 		});
 
 		$( "#opener" ).click(function() {
@@ -45,4 +57,4 @@
       console.log('Native web camera streaming (getUserMedia) is not supported in this browser.');
       video.play();
     }
-    
+  });    

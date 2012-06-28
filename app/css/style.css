@@ -17,8 +17,12 @@ body {
 /* W3C */
 }
 #ar-container {
-  width: 800px;
-  margin: 50px auto;
+  width: 1280px;
+  margin: 10px auto;
+}
+#p-container {
+  width: 1280px;
+  margin: 10px auto;
 }
 #camera-container {
   width: 640px;
