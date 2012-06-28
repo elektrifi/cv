@@ -16,10 +16,23 @@
 			width: 200,
 			minwidth: 100,
 			//position: [35, 30],
-			title: "Task List"
+			position: [40, 135],
+			title: "Task List",
+			open: function(event, ui) { 
+              // Set opacity 
+              $(this).parent().css('opacity', 0.5); 
+              //- Hide close button 
+              //- $(this).parent().children().children(".ui-dialog-titlebar-close").hide(); 
+              // Handle opacity 
+              $(this).parent().hover( function () { 
+                  $(this).css('opacity', 1.0); 
+              }, function (event) { 
+                  $(this).css('opacity', 0.5); 
+            }); 
+    } 
 		});
 
-		$( "#opener" ).click(function() {
+		$( "#tasks" ).click(function() {
 			$( "#dialog" ).dialog( "open" );
 			return false;
 		});
