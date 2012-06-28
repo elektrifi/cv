@@ -15,7 +15,7 @@
 			hide: "explode",
 			width: 200,
 			minwidth: 100,
-			position: [160, 1],
+			position: [35, 40],
 			title: "Task List"
 		});
 

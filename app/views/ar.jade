@@ -4,7 +4,7 @@
     p Please use Google Chrome - other browsers aren't yet ready for HTML5 media-streaming
     p 
     div
-      //video#live(width='640', height='480', autoplay='autoplay', style='display: inline;')
+      video#live(width='640', height='480', autoplay='autoplay', style='display: inline;')
 
 #p-container
   p Remember to enable mediastream/PeerConnection via chrome://flags 
@@ -13,16 +13,21 @@
 #p-container
   .demo
     #dialog(title='Basic dialog')
-      p
-        | This is an animated dialog which is useful for displaying information. 
-        | The dialog window can be moved, resized and closed with the 'x' icon.
+      p Corrosion Assessment
+        ul
+          li Perform inspection of aircraft structure for corrosion
+          li Perform removal of affected corroded areas by chemical/mechanical methods
+          li Perform measurement of corrosion damage
+          li Perform test of metal composites for corrosion
+          li Perform non-destructive testing inspection (NDI) and interpret results
+
   .demo
     button#opener Open Dialog
     button Test button
 
 script(src='/vendor/jquery.min.js')
 script(src='/vendor/jquery.form.js')
-script(src='/vendor/jquery-ui-1.8.18.custom.min.js')
+script(src='/vendor/jquery-ui-1.8.21.custom.min.js')
 script(src='/vendor/bootstrap-modal.js')
 script(src='/vendor/bootstrap-transition.js')
 script(src='/js/views/ar.js')
