@@ -1,18 +1,14 @@
 
 #camera-container
     h1 Live Video Stream v2
-    p Please use Google Chrome - other browsers aren't yet ready for HTML5 mediastreaming
-    p 
-    //div
-    //  video#live(width='320', height='240', autoplay='autoplay', style='display: inline;')
-    //  canvas#canvas(width='320', height='240', style='display: inline;')
+    p Please use Google Chrome - other browsers aren't yet ready for HTML5 media-streaming.
+      | Remember to enable mediastream/PeerConnection via chrome://flags
+      | (see "Enable Media Source API on video elements." & "Enable PeerConnection.")
     div(style='visibility: hidden; width: 0; height: 0;')
       canvas#canvas(width='320', height='240')
     div
       video#live(width='320', height='240', autoplay='autoplay', style='display: inline;')
       img#target(style='display: inline;')    
-    p Remember to enable mediastream/PeerConnection via chrome://flags
-    p See "Enable Media Source API on <video> elements." & "Enable PeerConnection."
 
 script(src='/vendor/jquery.min.js')
 script(src='/vendor/jquery.form.js')
