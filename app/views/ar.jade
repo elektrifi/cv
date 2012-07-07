@@ -5,7 +5,7 @@
       | Remember to enable mediastream/PeerConnection via chrome://flags
       | (see "Enable Media Source API on video elements." & "Enable PeerConnection.")
     div
-      video#live(width='800', height='600', autoplay='autoplay', style='display: inline;')
+      video#live(width='600', height='450', autoplay='autoplay', style='display: inline;')
 
 #p-container
     .demo
@@ -18,65 +18,35 @@
             li Perform test of metal composites for corrosion
             li Perform non-destructive testing inspection (NDI) and interpret results
 
-//- #button-container
-    //- button(id='opener') Open Dialog
+#v-container
+    .demo
+      #vdialog(title='Video dialog')
+        p Simulation
+          a#player(href='http://pseudo01.hddn.com/vod/demo.flowplayervod/flowplayer-700.flv')
+          ul
+            li Simulation 1
+
 .fg-toolbar.ui-widget-header.ui-corner-all.ui-helper-clearfix    
   .fg-buttonset.ui-helper-clearfix    
     button.fg-button.ui-state-default.ui-corner-all(id='tasks') Tasks
     button.fg-button.ui-state-default.ui-corner-all(id='sops') SOPs
     button.fg-button.ui-state-default.ui-corner-all(id='simulations') Simulations
-    button.fg-button.ui-state-default.ui-corner-all(id='training') Training
-    button.fg-button.ui-state-default.ui-corner-all(id='messages') Messages
-  
-//- .fg-toolbar.ui-widget-header.ui-corner-all.ui-helper-clearfix
-//- 
-//-     .fg-buttonset.ui-helper-clearfix
-//-        a.fg-button.ui-state-default.fg-button-icon-solo.ui-corner-all(title='Open', href='#')
-//-          span.ui-icon.ui-icon-folder-open
-//-          | Open
-//-        a.fg-button.ui-state-default.fg-button-icon-solo.ui-corner-all(title='Save', href='#')
-//-          span.ui-icon.ui-icon-disk
-//-          | Save
-//-        a.fg-button.ui-state-default.fg-button-icon-solo.ui-corner-all(title='Delete', href='#')
-//-          span.ui-icon.ui-icon-trash
-//-          | Delete
-//-      .fg-buttonset.fg-buttonset-multi
-//-        button.fg-button.ui-state-default.ui-corner-left
-//-          b B
-//-        button.fg-button.ui-state-default
-//-          i I
-//-        button.fg-button.ui-state-default.ui-corner-right
-//-          u U
-//-      .fg-buttonset.ui-helper-clearfix
-//-        a.fg-button.ui-state-default.fg-button-icon-solo.ui-corner-all(title='Print', href='#')
-//-          span.ui-icon.ui-icon-print
-//-          | Print
-//-        a.fg-button.ui-state-default.fg-button-icon-solo.ui-corner-all(title='Email', href='#')
-//-          span.ui-icon.ui-icon-mail-closed
-//-          | Email       
-//-      .fg-buttonset.fg-buttonset-single.ui-helper-clearfix
-//-        button.fg-button.ui-state-default.ui-state-active.ui-priority-primary.ui-corner-left Edit
-//-        button.fg-button.ui-state-default.ui-priority-primary.ui-corner-right View
+    button.fg-button.ui-state-default.ui-corner-all(id='training', href='#', rel='div.overlay') Flash    
+    button.fg-button.ui-state-default.ui-corner-all(id='training2', href='#', rel='div.overlay') Flash2
+    button.fg-button.ui-state-default.ui-corner-all(id='messages') Messages  
 
-//
-     button that opens up overlay 
-    p
-      button(href='#', rel='div.overlay') Open video overlay
-    //
-       element that is overlayed, visuals are done with external CSS 
-    .overlay(style='background-image: url(/media/img/overlay/white.png);')
-      //
-         flowplayer container 
-      a#player(href='http://pseudo01.hddn.com/vod/demo.flowplayervod/flowplayer-700.flv')
-        //
-           some initial content so that player is not loaded upon page load 
+//- element that is overlayed, visuals are done with external CSS 
+.overlay(style='background-image: url(/img/overlay/white.png);')
+    //- a#player(href='http://pseudo01.hddn.com/vod/demo.flowplayervod/flowplayer-700.flv')
+    a#player(href='/img/ICN-S1000DBIKE-AAA-DA10000-0-U8025-00537-A-03-1.SWF')
 
-
+// That's it...scripts now
 
 script(src='/vendor/jquery.min.js')
 script(src='/vendor/jquery.form.js')
+script(src='http://cdn.jquerytools.org/1.2.6/all/jquery.tools.min.js')
+//- script(src='/vendor/flowplayer-3.2.11.min.js')
 script(src='/vendor/jquery-ui-1.8.21.custom.min.js')
 script(src='/vendor/bootstrap-modal.js')
 script(src='/vendor/bootstrap-transition.js')
-script(src='/vendor/flowplayer-3.2.11.min.js')
 script(src='/js/views/ar.js')

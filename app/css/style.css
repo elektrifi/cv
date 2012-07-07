@@ -185,3 +185,18 @@ button i {
     display:none;
     background-image:url(/img/overlay/white.png);
 }
+.close {
+    background:url(/media/img/overlay/close.png) no-repeat;
+    position:absolute;
+    top:2px;
+    right:5px;
+    display:block;
+    width:35px;
+    height:35px;
+    cursor:pointer;
+}
+#player {
+    height:200px;
+    width: 200px;
+    display:block;
+}

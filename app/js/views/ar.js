@@ -1,4 +1,3 @@
-	
   $(document).ready(function() {
     // do stuff when DOM is ready
 	
@@ -29,7 +28,7 @@
               }, function (event) { 
                   $(this).css('opacity', 0.5); 
             }); 
-    } 
+          } 
 		});
 
 		$( "#tasks" ).click(function() {
@@ -70,26 +69,72 @@
       console.log('Native web camera streaming (getUserMedia) is not supported in this browser.');
       video.play();
     }
-    
-    // Flowplayer
-    // install flowplayer into flowplayer container
-    var player = $f("player", "http://releases.flowplayer.org/swf/flowplayer-3.2.12.swf");
- 
-    // set up button action. it will fire our overlay
-    $("button[rel]").overlay({
- 
+
+    // Flowplayer into overlay     
+    $(function() {   
+      // install flowplayer into flowplayer container
+      var player = $f("player", "http://releases.flowplayer.org/swf/flowplayer-3.2.12.swf");
+      // set up button action. it will fire our overlay
+      $("button[rel]").overlay({
         // use the Apple effect for overlay
         effect: 'apple',
- 
         // when overlay is opened, load our player
         onLoad: function() {
             player.load();
         },
- 
         // when overlay is closed, unload our player
         onClose: function() {
             player.unload();
         }
+      });
     });
-    
-  });    
+
+    // Flowplayer into panel     
+    $(function() {
+    	
+	  $( "#vdialog" ).dialog({
+		    autoOpen: false,
+			show: "blind",
+			hide: "explode",
+			width: 200,
+			minwidth: 100,
+			//position: [35, 30],
+			position: [140, 135],
+			title: "Simulation",
+			open: function(event, ui) { 
+              // Set opacity 
+              $(this).parent().css('opacity', 0.5); 
+              //- Hide close button 
+              //- $(this).parent().children().children(".ui-dialog-titlebar-close").hide(); 
+              // Handle opacity 
+              $(this).parent().hover( function () { 
+                  $(this).css('opacity', 1.0); 
+              }, function (event) { 
+                  $(this).css('opacity', 0.5); 
+          }); 
+        } 
+      });
+
+	  $( "#training2" ).click(function() {
+		$( "#vdialog" ).dialog( "open" );
+		return false;
+	  });    	
+    	   
+      // install flowplayer into flowplayer container
+      var player_panel = $f("player", "http://releases.flowplayer.org/swf/flowplayer-3.2.12.swf");
+      // set up button action. it will fire our overlay
+      $("button[rel]").overlay({
+        // use the Apple effect for overlay
+        effect: 'apple',
+        // when overlay is opened, load our player
+        onLoad: function() {
+            player_panel.load();
+        },
+        // when overlay is closed, unload our player
+        onClose: function() {
+            player_panel.unload();
+        }
+      });
+    });          
+       
+  }); 
