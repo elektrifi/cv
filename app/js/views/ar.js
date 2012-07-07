@@ -71,23 +71,23 @@
     }
 
     // Flowplayer into overlay     
-    $(function() {   
+    //$(function() {   
       // install flowplayer into flowplayer container
-      var player = $f("player", "http://releases.flowplayer.org/swf/flowplayer-3.2.12.swf");
+      //var player = $f("player", "http://releases.flowplayer.org/swf/flowplayer-3.2.12.swf");
       // set up button action. it will fire our overlay
-      $("button[rel]").overlay({
-        // use the Apple effect for overlay
-        effect: 'apple',
+      //$("button[rel]").overlay({
+      //  // use the Apple effect for overlay
+      //  effect: 'apple',
         // when overlay is opened, load our player
-        onLoad: function() {
-            player.load();
-        },
-        // when overlay is closed, unload our player
-        onClose: function() {
-            player.unload();
-        }
-      });
-    });
+      //  onLoad: function() {
+      //      player.load();
+      //  },
+      //  // when overlay is closed, unload our player
+      //  onClose: function() {
+      //      player.unload();
+      //  }
+      //});
+    //});
 
     // Flowplayer into panel     
     $(function() {
@@ -96,7 +96,7 @@
 		    autoOpen: false,
 			show: "blind",
 			hide: "explode",
-			width: 200,
+			width: 250,
 			minwidth: 100,
 			//position: [35, 30],
 			position: [140, 135],
@@ -115,26 +115,35 @@
         } 
       });
 
-	  $( "#training2" ).click(function() {
+	  $( "#simulations" ).click(function() {
 		$( "#vdialog" ).dialog( "open" );
+		var player = 
+		  $f("player", "/img/ICN-S1000DBIKE-AAA-DA10000-0-U8025-00537-A-03-1.SWF",{
+            // use a "sky blue" background on the player canvas
+            canvas: {
+              backgroundColor:'#ffffff'
+            }		  	
+		  }		  
+		);
+		player.load();
 		return false;
 	  });    	
     	   
       // install flowplayer into flowplayer container
-      var player_panel = $f("player", "http://releases.flowplayer.org/swf/flowplayer-3.2.12.swf");
+      //var player_overlay = $f("player", "http://releases.flowplayer.org/swf/flowplayer-3.2.12.swf");
       // set up button action. it will fire our overlay
-      $("button[rel]").overlay({
-        // use the Apple effect for overlay
-        effect: 'apple',
-        // when overlay is opened, load our player
-        onLoad: function() {
-            player_panel.load();
-        },
+      //$("button[rel]").overlay({
+      //  // use the Apple effect for overlay
+      //  effect: 'apple',
+      //  // when overlay is opened, load our player
+      //  onLoad: function() {
+      //      player_overlay.load();
+      //  },
         // when overlay is closed, unload our player
-        onClose: function() {
-            player_panel.unload();
-        }
-      });
+      //  onClose: function() {
+      //      player_overlay.unload();
+      //  }
+      //});
     });          
        
   }); 
