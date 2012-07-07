@@ -178,3 +178,10 @@ button i {
 .fg-toolbar { padding: .5em; margin: 0;  }
 .fg-toolbar .fg-buttonset { margin-right:1.5em; padding-left: 1px; }
 .fg-toolbar .fg-button { font-size: 1em;  }
+
+.overlay {
+    padding:40px;
+    width:576px;
+    display:none;
+    background-image:url(/img/overlay/white.png);
+}

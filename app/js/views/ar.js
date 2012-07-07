@@ -70,4 +70,26 @@
       console.log('Native web camera streaming (getUserMedia) is not supported in this browser.');
       video.play();
     }
+    
+    // Flowplayer
+    // install flowplayer into flowplayer container
+    var player = $f("player", "http://releases.flowplayer.org/swf/flowplayer-3.2.12.swf");
+ 
+    // set up button action. it will fire our overlay
+    $("button[rel]").overlay({
+ 
+        // use the Apple effect for overlay
+        effect: 'apple',
+ 
+        // when overlay is opened, load our player
+        onLoad: function() {
+            player.load();
+        },
+ 
+        // when overlay is closed, unload our player
+        onClose: function() {
+            player.unload();
+        }
+    });
+    
   });    

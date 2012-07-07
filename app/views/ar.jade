@@ -58,9 +58,25 @@
 //-        button.fg-button.ui-state-default.ui-state-active.ui-priority-primary.ui-corner-left Edit
 //-        button.fg-button.ui-state-default.ui-priority-primary.ui-corner-right View
 
+//
+     button that opens up overlay 
+    p
+      button(href='#', rel='div.overlay') Open video overlay
+    //
+       element that is overlayed, visuals are done with external CSS 
+    .overlay(style='background-image: url(/media/img/overlay/white.png);')
+      //
+         flowplayer container 
+      a#player(href='http://pseudo01.hddn.com/vod/demo.flowplayervod/flowplayer-700.flv')
+        //
+           some initial content so that player is not loaded upon page load 
+
+
+
 script(src='/vendor/jquery.min.js')
 script(src='/vendor/jquery.form.js')
 script(src='/vendor/jquery-ui-1.8.21.custom.min.js')
 script(src='/vendor/bootstrap-modal.js')
 script(src='/vendor/bootstrap-transition.js')
+script(src='/vendor/flowplayer-3.2.11.min.js')
 script(src='/js/views/ar.js')
